@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 8</title>
+  </head>
+  <body style="background-color: orange;">
+    <div>
+      <h1 style="color:purple;">Cool Calculator</h1>
+    </div>
+
+
+    <form name="Calcultor" method="Get" id="form1">
+      <div>Input 1<input type="text" name="fnum" id="box1" /></div>
+      <div>
+        Input 2 <input type="text" name="snum" id="box2" />
+        <button type="button" onclick="Add();">+</button>
+        <button type="button" onclick="Subtract();">-</button>
+        <button type="button" onclick="Divide();">/</button>
+        <button type="button" onclick="Multiply();">*</button>
+        <button type="button" onclick="Power();">^</button>
+        <button type="button" onclick="Clear();">Clear</button>
+      </div>
+      <div>Answer:<input type="text" name="ans" id="answer" /></div>
+    </form>
+
+    <script>
+      function Add() {
+        var x = document.getElementById("box1").value;
+        var y = document.getElementById("box2").value;
+
+        document.getElementById("answer").value = parseInt(x) + parseInt(y);
+        document.form1.submit();
+      }
+
+      function Subtract() {
+        var x = document.getElementById("box1").value;
+        var y = document.getElementById("box2").value;
+
+        document.getElementById("answer").value = parseInt(x) - parseInt(y);
+        document.form1.submit();
+      }
+
+      function Divide() {
+        var x = document.getElementById("box1").value;
+        var y = document.getElementById("box2").value;
+
+        document.getElementById("answer").value = parseInt(x) / parseInt(y);
+        document.form1.submit();
+      }
+
+      function Multiply() {
+        var x = document.getElementById("box1").value;
+        var y = document.getElementById("box2").value;
+
+        document.getElementById("answer").value = parseInt(x) * parseInt(y);
+        document.form1.submit();
+      }
+
+      function Power() {
+        var x = document.getElementById("box1").value;
+        var y = document.getElementById("box2").value;
+
+        var total = 1;
+
+        for (var i = 0; i < y; i++) {
+          total *= x;
+        }
+
+        document.getElementById("answer").value = total;
+        document.form1.submit();
+      }
+
+      function Clear() {
+        document.getElementById("box1").value = "";
+        document.getElementById("box2").value = "";
+        document.getElementById("answer").value = "";
+
+        document.form1.submit();
+      }
+    </script>
+  </body>
+</html>
