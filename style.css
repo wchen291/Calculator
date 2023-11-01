@@ -1,0 +1,26 @@
+button {
+    padding: 10px;
+    font-size: medium;
+    height: 40px;
+    width: 40px;
+    background-color: antiquewhite;
+    border: blue;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 20px;
+    margin: 2px 2px;
+}
+
+input {
+    padding: 10px;
+    font-size: medium;
+    width: 116px;
+    float: none;
+}
+
+input.box1 {
+    padding: auto;
+    
+}
